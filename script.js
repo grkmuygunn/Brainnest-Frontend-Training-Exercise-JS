@@ -52,9 +52,9 @@ function userInput() {
     if ((selection == 'scissors') || (selection == 'rock') || (selection == 'paper')) {
         return selection;
     } else {
-        alert('You entered another option. Please enter only \'Rock\', \'Paper\' or \'Scissors\'')
-        userInput();
+        alert('You entered another option. Please enter only \'Rock\', \'Paper\' or \'Scissors\'');
     }
+    return userInput();
 }
 
 function game() {
@@ -62,7 +62,7 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
     for (let i = 0; i < 5; i++) {
-        console.log(`------- ROUND ${roundNumber} -------`)
+        console.log(`------- ROUND ${roundNumber} -------`);
         let roundWinner = playRound();
         if (roundWinner == 'computer') {
             computerScore++;
@@ -71,7 +71,7 @@ function game() {
         } else {
             //pass
         }
-        console.log(`Player ${playerScore} - ${computerScore} Computer`)
+        console.log(`Player ${playerScore} - ${computerScore} Computer`);
         roundNumber++;
     }
     if (computerScore > playerScore) {
@@ -81,7 +81,7 @@ function game() {
     } else {
         alert('It\'s a Tie! That was close..');
     }
-    alert('Refresh the page to play again!')
+    alert('Refresh the page to play again!');
 }
 
 game();
