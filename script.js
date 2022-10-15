@@ -81,7 +81,8 @@ function game() {
     } else {
         alert('It\'s a Tie! That was close..');
     }
-    alert('Refresh the page to play again!');
+    alert('After pressing OK, the game will restart!');
+    return game();
 }
 
 game();
