@@ -16,8 +16,8 @@ function playRound() {
         alert('Tie!')
         winner = 'tie'
     }
-    else if (playerSelection == 'rock') {
-        if (computerSelection == 'paper') {
+    else if (playerSelection === 'rock') {
+        if (computerSelection === 'paper') {
             alert('You lose! Paper beats Rock.');
             winner = 'computer'
         } else {
@@ -25,8 +25,8 @@ function playRound() {
             winner = 'player'
         }
     }
-    else if (playerSelection == 'paper') {
-        if (computerSelection == 'rock') {
+    else if (playerSelection === 'paper') {
+        if (computerSelection === 'rock') {
             alert('You won! Paper beats Rock.')
             winner = 'player'
         } else {
@@ -34,8 +34,8 @@ function playRound() {
             winner = 'computer'
         }
     }
-    else if (playerSelection == 'scissors') {
-        if (computerSelection == 'rock') {
+    else if (playerSelection === 'scissors') {
+        if (computerSelection === 'rock') {
             alert('You lose! Rock beats Scissors.')
             winner = 'computer'
         } else {
@@ -49,7 +49,7 @@ function playRound() {
 function userInput() {
     let input = prompt('Make your choice! Rock, Paper, Scissors?');
     const selection = input.toLowerCase();
-    if ((selection == 'scissors') || (selection == 'rock') || (selection == 'paper')) {
+    if ((selection === 'scissors') || (selection === 'rock') || (selection === 'paper')) {
         return selection;
     } else {
         alert('You entered another option. Please enter only \'Rock\', \'Paper\' or \'Scissors\'');
@@ -64,9 +64,9 @@ function game() {
     for (let i = 0; i < 5; i++) {
         console.log(`------- ROUND ${roundNumber} -------`);
         let roundWinner = playRound();
-        if (roundWinner == 'computer') {
+        if (roundWinner === 'computer') {
             computerScore++;
-        } else if (roundWinner == 'player') {
+        } else if (roundWinner === 'player') {
             playerScore++;
         } else {
             //pass
