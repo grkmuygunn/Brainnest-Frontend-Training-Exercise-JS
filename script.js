@@ -13,33 +13,33 @@ function playRound() {
     console.log(`Computer selected ${computerSelection}.`);
 
     if (playerSelection === computerSelection) {
-        console.log('Tie!')
+        alert('Tie!')
         winner = 'tie'
     }
     else if (playerSelection == 'rock') {
         if (computerSelection == 'paper') {
-            console.log('You lose! Paper beats Rock.');
+            alert('You lose! Paper beats Rock.');
             winner = 'computer'
         } else {
-            console.log('You Won! Rock beats Scissors.');
+            alert('You Won! Rock beats Scissors.');
             winner = 'player'
         }
     }
     else if (playerSelection == 'paper') {
         if (computerSelection == 'rock') {
-            console.log('You won! Paper beats Rock.')
+            alert('You won! Paper beats Rock.')
             winner = 'player'
         } else {
-            console.log('You lose! Scissors beats Paper.')
+            alert('You lose! Scissors beats Paper.')
             winner = 'computer'
         }
     }
     else if (playerSelection == 'scissors') {
         if (computerSelection == 'rock') {
-            console.log('You lose! Rock beats Scissors.')
+            alert('You lose! Rock beats Scissors.')
             winner = 'computer'
         } else {
-            console.log('You won! Scissors beats Paper.')
+            alert('You won! Scissors beats Paper.')
             winner = 'player'
         }
     }
@@ -75,13 +75,13 @@ function game() {
         roundNumber++;
     }
     if (computerScore > playerScore) {
-        console.log('You lose the game... Computer Wins. Better luck next time');
+        alert('You lose the game... Computer Wins. Better luck next time..');
     } else if (computerScore < playerScore) {
-        console.log('You won the game! Congratulations!');
+        alert('You won the game! Congratulations!');
     } else {
-        console.log('It\'s a Tie! That was close..');
+        alert('It\'s a Tie! That was close..');
     }
-    console.log('Refresh the page to play again!')
+    alert('Refresh the page to play again!')
 }
 
 game();
